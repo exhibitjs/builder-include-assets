@@ -1,6 +1,7 @@
 import {extname, resolve, normalize, dirname} from 'path';
 import findAssets from 'find-assets';
 
+
 export default function () {
   let Promise;
 
@@ -33,7 +34,7 @@ export default function () {
 
         return this.import(assetPath)
           .catch(error => {
-            if (error.code === 'EXHIBITNOTFOUND') {
+            if (error.code === 'ENOENT' || error.code === 'EISDIR') {
               // couldn't import this asset.
               // don't bail; just emit the error so it gets reported
 
