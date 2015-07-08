@@ -1,6 +1,6 @@
 {
   "name": "exhibit-include-assets",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "author": "Callum Locke",
   "devDependencies": {
     "babel": "^5.5.8",
